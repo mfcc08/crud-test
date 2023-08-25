@@ -1,3 +1,61 @@
-{% for pedido in pedidos %}
-<h3>{{pedido.id}}</h3><hr>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+</style>
+<body>
+
+<table style="width:100%;font-size:130%;">
+    <tr>
+        <th>ATUALIZAR</th>
+        <th>ID</th>
+        <th>N_ITEM</th>
+        <th>DATA</th>
+        <th>DATA_ETIQUETA</th>
+        <th>PRIORIDADE</th>
+        <th>EXPRESS</th>
+        <th>VALOR_PEDIDO</th>
+        <th>VALOR_FRETE</th>
+        <th>PAGAMENTO</th>
+        <th>STATUS</th>
+        <th>PRODUTO</th>
+        <th>TIPO_COURO</th>
+        <th>COR</th>
+        <th>PERSONALIZACAO</th>
+        <th>IMPRESSAO</th>
+        <th>ENDERECO</th>
+        <th>ESTADO</th>
+        <th>ETIQUETA</th>
+        <th>OBS</th>  
+    </tr>
+
+    {% for pedido in pedidos %}
+    <tr>
+        <td><button ></button></td>
+        <td>{{ pedido.id }}</td>
+        <td>{{ pedido.n_item }}</td>
+        <td>{{ pedido.data }}</td>
+        <td>{{ pedido.data_etiqueta }}</td>
+        <td>{{ pedido.prioridade }}</td>
+        <td>{{ pedido.express }}</td>
+        <td>{{ pedido.valor_pedido }}</td>
+        <td>{{ pedido.valor_frete }}</td>
+        <td>{{ pedido.pagamento }}</td>
+        <td>{{ pedido.status }}</td>
+        <td>{{ pedido.produto }}</td>
+        <td>{{ pedido.tipo_couro }}</td>
+        <td>{{ pedido.cor }}</td>
+        <td>{{ pedido.personalizacao }}</td>
+        <td>{{ pedido.impressao }}</td>
+        <td>{{ pedido.endereco }}</td>
+        <td>{{ pedido.estado }}</td>
+        <td>{{ pedido.etiqueta }}</td>
+        <td>{{ pedido.obs }}</td>
+    </tr>
+    {% endfor %}
+        </table>
+    </body>
+</html>
